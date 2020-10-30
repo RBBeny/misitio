@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include('../partials/head'); %>
+    <script>
+        const MongoClient = require('mongodb').MongoClient;
+        const uri = "mongodb+srv://test:test@cluster0.ypvzk.mongodb.net/AWOS?retryWrites=true&w=majority";
+        const client = new MongoClient(uri, { useNewUrlParser: true });
+        client.connect(err => {
+            const collection = client.db("test").collection("devices");
+            // perform actions on the collection object
+            client.close();
+        });
+    </script>
+</head>
+
+<body>
+
+
+    <div class="jumbotron">
+
+        <p class="lead">Este es un ejemplo basico</p>
+        <img src="../images/node.jpg" width="400" height="300" />
+        <hr class="my-4">
+        <p>Mi primer sitio basico con Express</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+
+    </div>
+
+    <div id="container">
+        <div id="map" style="width: 100%; height: 530px;"></div>
+
+    </div>
+    <%- include('../partials/footer'); %>
+    <%- include('../partials/script'); %>
+</body>
+
+</html>

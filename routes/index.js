@@ -16,6 +16,20 @@ router.get('/', function(req, res, next) {
 router.get('/ubicacion', function(req, res, next) {
   res.render('pages/ubicacion', {page: 'ubicacion', menuId: 'ubicacion' });
 });
+router.get('/ayudar', function(req, res, next) {
+  res.render('pages/ayudar', {page: 'ayudar', menuId: 'ayudar' });
+});
+router.get('/videos', function(req, res, next) {
+  res.render('pages/videos', {page: 'Videos', menuId: 'videos' });
+});
+/*
+router.get('/login', function(req, res, next) {
+  res.render('pages/login', {page: 'login', menuId: 'login' });
+});
+router.post('/login', function(req, res){
+  res.send('Te doy un saludo con POST de parte de Benjamin')
+});
+*/
 router.post('/', function(req, res){
   res.send('Te doy un saludo con POST de parte de Benjamin')
 });
