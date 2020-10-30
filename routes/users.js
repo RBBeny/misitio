@@ -12,7 +12,7 @@ module.exports = router;
 
 /*  LOGIN */
 router.post("/", function(req, res, next) {
- 
+  console.log(req.body);
   var user = new User({
     nombre: req.body.nombre,  
     apellidos: req.body.apellidos,
