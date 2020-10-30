@@ -32,9 +32,9 @@ router.post("/", function(req, res, next) {
 
   user.save((err, response) => {
      if (err) {req.flash('error_msg','Error al enviar')
-     res.redirect('/')}else{
+     res.redirect('/ubicacion')}else{
      req.flash('success_msg','Enviado')
-     res.redirect('/');}
+     res.redirect('/videos');}
      
     
   });
