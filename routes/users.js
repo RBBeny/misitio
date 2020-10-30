@@ -11,7 +11,7 @@ module.exports = router;
 
 
 /*  LOGIN */
-router.post("/login", function(req, res, next) {
+router.post("/", function(req, res, next) {
  
   var user = new User({
     nombre: req.body.nombre,  

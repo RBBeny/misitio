@@ -30,9 +30,11 @@ router.post('/login', function(req, res){
   res.send('Te doy un saludo con POST de parte de Benjamin')
 });
 */
+/*
 router.post('/', function(req, res){
   res.send('Te doy un saludo con POST de parte de Benjamin')
 });
+*/
 router.put('/greeting', function(req, res){
   res.send('Te doy un saludo con Greeting de parte de Benjamin')
 });
