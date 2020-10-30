@@ -12,7 +12,7 @@ module.exports = router;
 
 /*  LOGIN */
 router.post("/", function(req, res, next) {
-  console.log(req.body);
+  
   var user = new User({
     nombre: req.body.nombre,  
     apellidos: req.body.apellidos,
@@ -25,15 +25,16 @@ router.post("/", function(req, res, next) {
   /*
   user.save((err, response) => {
       if (err) {res.status(400).send(err);
-        res.redirect('/')}
+        res.redirect('/ubicacion')}
       res.status(200).send(response);
   });
   */
+ 
 
   user.save((err, response) => {
-     if (err) {req.flash('error_msg','Error al enviar')
+     if (err) {
      res.redirect('/ubicacion')}else{
-     req.flash('success_msg','Enviado')
+    
      res.redirect('/videos');}
      
     
