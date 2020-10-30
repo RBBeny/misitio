@@ -35,7 +35,7 @@ router.post("/", function(req, res, next) {
      if (err) {
      res.redirect('/ubicacion')}else{
     
-     res.redirect('/videos');}
+     res.redirect('/');}
      
     
   });
