@@ -14,8 +14,11 @@ module.exports = router;
 router.post("/login", function(req, res, next) {
  
   var user = new User({
-      email: req.body.email,
-      password: req.body.password
+    nombre: req.body.nombre,  
+    apellidos: req.body.apellidos,
+    email:req.body.email,
+    numero:req.body.numero,
+    mensaje: req.body.mensaje
   });
 
   //Guarda un registro en Mongo
