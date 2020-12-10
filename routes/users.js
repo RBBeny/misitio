@@ -12,7 +12,7 @@ module.exports = router;
 
 /*  LOGIN */
 router.post("/", function(req, res, next) {
- 
+  
   var user = new User({
     nombre: req.body.nombre,  
     apellidos: req.body.apellidos,
@@ -22,12 +22,23 @@ router.post("/", function(req, res, next) {
   });
 
   //Guarda un registro en Mongo
+  /*
   user.save((err, response) => {
       if (err) {res.status(400).send(err);
-        res.redirect('/')}
+
       res.status(200).send(response);
   });
+  */
+ 
 
+  user.save((err, response) => {
+     if (err) {
+     res.redirect('/ubicacion')}else{
+    
+     res.redirect('/');}
+     
+    
+  });
   //Busca un registro mediante el email
   /*
   User.findById(req.body.email, (err, user) => {
