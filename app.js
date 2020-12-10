@@ -12,6 +12,10 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var acercadeRouter = require('./routes/acercade'); //
 
+var videojuegosRouter = require('./routes/videojuegos'); //
+var jugadoresRouter = require('./routes/jugadores'); //
+var registrosRouter = require('./routes/registros'); //
+
 var app = express();
 
 InitiateMongoServer();  //mongo
@@ -31,6 +35,9 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/acercade', acercadeRouter);
 
+app.use('/videojuegos', videojuegosRouter); //
+app.use('/jugadores', jugadoresRouter); //
+app.use('/registros', registrosRouter); //
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

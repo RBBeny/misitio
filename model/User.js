@@ -4,30 +4,23 @@ var Schema = mongoose.Schema;
 var userSchema = new Schema({
     nombre: {
         type: String,
-        required: true,
-        
+        required: true,   
     },
     apellidos: {
         type: String,
-        required: true,
-        
+        required: true,        
     },
     email: {
         type: String,
-        required: true,
-        
+        required: true,        
     },
     numero: {
         type: String,
-        required: true,
-        
+        required: true,        
     },
     mensaje: {
         type: String,
-        required: true,
-        
-    }
-    
+        required: true,        
+    }   
 });
- 
 module.exports = mongoose.model('User', userSchema);

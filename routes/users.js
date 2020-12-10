@@ -23,7 +23,8 @@ router.post("/", function(req, res, next) {
 
   //Guarda un registro en Mongo
   user.save((err, response) => {
-      if (err) res.status(400).send(err);
+      if (err) {res.status(400).send(err);
+        res.redirect('/')}
       res.status(200).send(response);
   });
 

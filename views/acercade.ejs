@@ -4,6 +4,7 @@
   <head>
     
     <%- include('partials/head'); %>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
    
   </head>
   <body>
@@ -16,10 +17,40 @@
         <p class="card-text">Hola Yo soy Benjamin Ramirez Bolaños del Grupo GDS0241 y el desarrollo de este trabajo me parece muy interesante</p>
       </div>
     </div>
-    
+    <table id="table_id" class="display">
+      <tbody>
+        <% if(data.length > 0){ %>
+        <% for ( var i = 0 ; i < data.length ; i++){ %>
+        <tr>
+          <td>
+            <%= data[i].IdVideojuego%>
+          </td>
+          <td>
+            <%= data[i].Nombre%>
+          </td>
+          <td>
+            <%= data[i].Genero%>
+          </td>
+          <td>
+            <%= data[i].Duracion%>
+          </td>
+          <td>
+            <%= data[i].Plataforma%>
+          </td>
+          <td>&nbsp;</td>
+  
+        </tr>
+        <% } %>
+        <% } %>
+      </tbody>
+    </table>
+  
     
     <%- include('partials/footer'); %>
     <%- include('partials/script'); %>
-</body>
 
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+
+<script src="/public/javascripts/videojuegos.js"></script>
+</body>
 </html>
