@@ -1,3 +1,9 @@
+/*
+    Nombre del autor: Benjamin Ramirez Bolaños
+    Objetivo del Archivo: Se manda llamar a los microservicios
+    y en este tambien se llamas a los tres en agregar uno nuevo
+    Fecha: 7/12/2020
+*/
 var express = require('express');
 var router = express.Router();
 var request = require('request');
@@ -6,7 +12,7 @@ var request = require('request');
 var mensaje = '';
 var data1= [];
 var data2= [];
-var local= 'https://microserviciosunidad3.herokuapp.com/';
+var local= 'https://microserviciosunidad3.herokuapp.com/'; //Esta es la direccion de los microservicios
 
 //listado
 router.get('/', function (req, res, next) {
