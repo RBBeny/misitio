@@ -6,7 +6,7 @@ var request = require('request');
 var mensaje = '';
 
 
-var local= 'http://localhost:4000/';
+var local= 'https://microserviciosunidad3.herokuapp.com/';
 //listado
 router.get('/', function (req, res, next) {
     request.get(local+"jugadores", (error, response, body) => {
