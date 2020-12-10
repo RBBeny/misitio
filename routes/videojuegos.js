@@ -1,4 +1,8 @@
-
+/*
+    Nombre del autor: Benjamin Ramirez Bolaños
+    Objetivo del Archivo: Se manda llamar a los microservicios
+    Fecha: 7/12/2020
+*/
 var express = require('express');
 var router = express.Router();
 var request = require('request');
@@ -6,7 +10,7 @@ var request = require('request');
 
 var mensaje = '';
 
-var local= 'https://microserviciosunidad3.herokuapp.com/';
+var local= 'https://microserviciosunidad3.herokuapp.com/'; // direccion microservicios
 
 
 //listado
